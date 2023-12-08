@@ -8,10 +8,12 @@ import { NavBar } from "~/components/NavBar";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ClerkProvider {...pageProps}>
-        <NavBar/>
-      <Component {...pageProps} />;
-    </ClerkProvider>
+    <div className="dark:text-white light:text-black">
+      <ClerkProvider {...pageProps}>
+        <NavBar />
+        <Component {...pageProps} />;
+      </ClerkProvider>
+    </div>
   );
 };
 
